@@ -2,7 +2,7 @@
 Thanks To USE MY TOOLS 
 
 # HOW TO USE:
-steps 1:download python:
+steps 1:download python: vereson 
 https://www.python.org/
 
 steps 2:Install builder: 
@@ -29,4 +29,4 @@ pip install request
 
 # Open to KILLING ZOOM
 
-discord.gg/XpTPM4pJU3
+https://discord.gg/XpTPM4pJU3
