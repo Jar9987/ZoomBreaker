@@ -68,6 +68,16 @@ def play_video_as_webcam(video_path):
     except Exception as e:
         print(f"Error: {e}")
 
+# Hàm tham gia Zoom
+def join_zoom():
+    join_id = input("Enter join ID: ")
+    password = input("Enter password (press Enter to skip): ")
+    zoom_command = f"start zoommtg://zoom.us/join?action=join&confno={join_id}"
+    if password:
+        zoom_command += f"&pwd={password}"
+    os.system(zoom_command)
+    print("Joining Zoom...")
+
 # Menu chính
 def main():
     while True:
@@ -81,14 +91,15 @@ def main():
 █████████████  ██████████████ ██████████████ ██        ██         ██
 """ + "\033[0m")
         print("""
-=====================================
-| tool BREAKER ZOOM PREMIUM NEW      |
-|    [1] Youtube Ulr                 |
-|    [2] Video In bin\video          |
-|    [3] Quit                        |
+=====================================|
+| tool pha zoom v1 made by minhnhat  |
+|    [1] Video in url youtube        |
+|    [2] video in       bin\video    |
+|    [3] join zoom [beta]            |
+|    [4] exit                        |
 |====================================|
         """)
-        choice = input("Choice (123): ")
+        choice = input("Choice (1234): ")
 
         if choice == "1":
             video_path = download_youtube_video()
@@ -101,7 +112,10 @@ def main():
                 play_video_as_webcam(video_path)
 
         elif choice == "3":
-            print("Qutiing...")
+            join_zoom()
+
+        elif choice == "4":
+            print("Quitting...")
             sys.exit()
 
         else:
